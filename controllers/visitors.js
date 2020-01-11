@@ -8,7 +8,7 @@ exports.createVisitor = async (req, res, next) => {
     const visitor = await Visitor.create({ name }, (err) => {
       if (err) return console.error(err);
     });
-
+    // new Visitor ....  await visitor.save()
     return res.render('index', {
       text: 'El visitante fue almacenado con éxito',
     });
